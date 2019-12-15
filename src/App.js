@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
-      deric kwok
+      <div className="wip-container text-center">
+        <h1> DK </h1>
+        <div className="wip-label"> Under Construction</div>
+      </div>
     </div>
   );
 }
