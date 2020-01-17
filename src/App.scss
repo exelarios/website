@@ -1,0 +1,21 @@
+body {
+    font-family: 'Courier New', Courier, monospace !important;
+    color: white !important;
+    text-decoration: none !important;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    position: relative;
+}
+
+body::-webkit-scrollbar { 
+    display: none; 
+}
+
+::selection{
+    background-color: #9b59b6;
+    visibility: 100%;
+}
+
+a:hover{
+    text-decoration: none !important;
+}

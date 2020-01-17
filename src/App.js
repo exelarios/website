@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route , Switch } from 'react-router-dom';
 
 // CSS
-import './App.css';
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Components
@@ -15,7 +15,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Switch>
-            <Route exact path="/" component={Mainteance}/>
+            <Route exact path="/" component={Home}/>
           </Switch>
         </div>
       </BrowserRouter>
