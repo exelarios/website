@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // Components
 import Mainteance from './Components/maintenance/maintenance';
 import Home from './Components/home/home';
+import Resume from './pages/resume/resume';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <div className="App">
           <Switch>
             <Route exact path="/" component={Home}/>
+            <Route exact path="/resume" component={Resume}/>
           </Switch>
         </div>
       </BrowserRouter>
