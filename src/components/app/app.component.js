@@ -6,7 +6,7 @@ import {
 
 import "./app.styles.scss"
 
-import Home from "../home/home.component";
+import Home from "../../pages/home/home.component";
 
 function App() {
     return(
