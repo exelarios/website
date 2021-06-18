@@ -14,9 +14,9 @@ function Home() {
 
             <div className="content">
                 <p>
-                    A student at Cal Poly Pomona studying Computer Science with interest of software engineering.
+                    A student at Cal Poly Pomona studying Computer Science with interest in software engineering.
                 </p>
-                    Also a tech enthusiast, graphic design hobbyist, amateur photographer and a walking meme. Always looking for new challenges in order to learn more about my field of study.
+                    Also a tech enthusiast, graphic design hobbyist, amateur photographer, and a walking meme. Always looking for new challenges to learn more about my field of study.
                 <p>
                     Feel free to contact me if you have any opportunities you'd like to discuss or if you just want to grab some boba.
                 </p>
