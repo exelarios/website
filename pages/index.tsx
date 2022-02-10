@@ -93,25 +93,25 @@ const Home: NextPage = () => {
         <link rel="icon" href="/images/favicon.png" />
       </Head>
       <main>
-        <Navbar location="Los Angeles" />
+        <Navbar location="los angeles" />
         <Container>
           <ContentContainer>
             <Content>
               <h1>deric</h1>
               <p>
-                A student at Cal Poly Pomona studying Computer Science with
+                a student at Cal Poly Pomona studying Computer Science with
                 interest in frontend software engineering.
               </p>
               <p>
-                Currently an intern at Zendesk; part of Team Garden working on design system.
+                currently an intern at Zendesk; part of Team Garden working on design system.
               </p>
               <p>
-                Also a tech enthusiast, esk8er, graphic design hobbyist, amateur
+                also a tech enthusiast, esk8er, graphic design hobbyist, amateur
                 photographer, and a walking meme. Always looking for new
                 challenges to learn more about my field of study.
               </p>
               <p>
-                Feel free to contact me if you just wanna chat or grab boba.
+                feel free to contact me if you just wanna chat or grab boba.
               </p>
             </Content>
             <MediaContainer>
