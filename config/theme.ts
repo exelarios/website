@@ -25,7 +25,6 @@ export const GlobalStyles = createGlobalStyle`
     max-width: 1920px;
     margin: 0;
     padding: 0;
-    transition: all 1s;
 
     * {
       box-sizing: border-box;

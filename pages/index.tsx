@@ -45,10 +45,12 @@ const ContentContainer = styled(Section)`
 const Content = styled.div`
   margin: auto;
   min-height: 300px;
+  transition: all 1s;
   width: 100%;
 `;
 
-interface IArtworkProps extends React.HTMLAttributes<HTMLElement> {
+interface IArtworkProps
+  extends React.HTMLAttributes<HTMLElement> {
   mode?: string
 }
 
@@ -63,6 +65,7 @@ const Artwork = styled.div<IArtworkProps>`
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 50%;
+  transition: all 1s;
   @media (max-width: 1000px) {
     width: 100%;
   }
@@ -124,7 +127,7 @@ const Home: NextPage = () => {
               />
               <Media 
                 icon={Linkedin} 
-                href="https://linkedin.com/derickwok"
+                href="https://linkedin.com/in/derickwok"
                 hoverColor="#4078c0"
               />
             </MediaContainer>
