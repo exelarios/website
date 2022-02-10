@@ -1,5 +1,4 @@
 import { 
-  useContext, 
   useEffect, 
   useMemo, 
   useState 
@@ -12,8 +11,7 @@ import {
 } from "./styles";
 
 import {
-  ThemeContext, 
-  IThemeContext 
+  useTheme
 } from "../../context/useTheme";
 
 import Moon from "../../assets/tokens/moon.svg";
@@ -25,7 +23,7 @@ interface INavbarProps {
 
 export function Navbar(props: INavbarProps) {
   const { location } = props;
-  const { mode, setTheme, theme } = useContext<IThemeContext>(ThemeContext);
+  const { mode, setTheme } = useTheme();
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {

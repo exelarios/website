@@ -5,7 +5,6 @@ import styled from "styled-components";
 
 import {
   ThemeContext, 
-  IThemeContext 
 } from "../context/useTheme";
 
 import {
@@ -74,14 +73,16 @@ const MediaContainer = styled.div`
 
 const Home: NextPage = () => {
 
-  const { mode } = useContext<IThemeContext>(ThemeContext);
+  const { mode } = useContext(ThemeContext);
 
   return (
     <div>
       <Head>
         <title>deric</title>
-        <meta name="description" content="A student at Cal Poly Pomona studying Computer Science with
-                interest in frontend software engineering." />
+        <meta 
+          name="description" 
+          content="A student at Cal Poly Pomona studying Computer Science with interest in frontend software engineering."
+        />
         <link rel="icon" href="/images/favicon.png" />
       </Head>
       <main>

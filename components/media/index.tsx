@@ -1,17 +1,15 @@
-import React, { useState, useContext } from "react";
-import styled from "styled-components";
-
-import { ThemeContext, IThemeContext } from "../../context/useTheme";
+import React, { useState } from "react";
+import { useTheme } from "../../context/useTheme";
 
 interface IMediaProps extends React.HTMLAttributes<HTMLElement> {
-  icon: React.ReactNode,
+  icon: React.ComponentType<any>,
   href: string,
   hoverColor?: string
 }
 
 export function Media(props: IMediaProps) {
   const { icon: Icon, href, hoverColor } = props;
-  const { theme } = useContext<IThemeContext>(ThemeContext);
+  const { theme } = useTheme();
   const [isHovering, setIsHovering] = useState(false);
 
   return (
