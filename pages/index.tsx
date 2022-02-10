@@ -1,10 +1,9 @@
-import { useContext } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import styled from "styled-components";
 
 import {
-  ThemeContext, 
+  useTheme
 } from "../context/useTheme";
 
 import {
@@ -73,7 +72,7 @@ const MediaContainer = styled.div`
 
 const Home: NextPage = () => {
 
-  const { mode } = useContext(ThemeContext);
+  const { mode } = useTheme();
 
   return (
     <div>
