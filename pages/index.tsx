@@ -1,3 +1,4 @@
+import React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import styled from "styled-components";
@@ -47,11 +48,15 @@ const Content = styled.div`
   width: 100%;
 `;
 
-const Artwork = styled.div<{ theme: string }>`
+interface IArtworkProps extends React.HTMLAttributes<HTMLElement> {
+  mode?: string
+}
+
+const Artwork = styled.div<IArtworkProps>`
   width: 450px;
   height: 600px;
   margin: auto;
-  background-image: ${p => p.theme === "dark" 
+  background-image: ${p => p.mode === "dark" 
     ? `url("/images/skateboarding.jpg")` 
     : `url("/images/lights.jpg")`};
 
@@ -125,7 +130,7 @@ const Home: NextPage = () => {
             </MediaContainer>
           </ContentContainer>
           <Section>
-            <Artwork theme={mode}/>
+            <Artwork mode={mode}/>
           </Section>
         </Container>
       </main>
