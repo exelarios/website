@@ -51,7 +51,7 @@ const Content = styled.div`
 
 interface IArtworkProps
   extends React.HTMLAttributes<HTMLElement> {
-  mode?: string
+  mode?: string;
 }
 
 const Artwork = styled.div<IArtworkProps>`
@@ -107,11 +107,11 @@ const Home: NextPage = () => {
               </p>
               <p>
                 also a tech enthusiast, esk8er, graphic design hobbyist, amateur
-                photographer, and a walking meme. Always looking for new
+                photographer, and a walking meme. always looking for new
                 challenges to learn more about my field of study.
               </p>
               <p>
-                feel free to contact me if you just wanna chat or grab boba.
+                feel free to reach me if you just wanna chat or grab boba.
               </p>
             </Content>
             <MediaContainer>
