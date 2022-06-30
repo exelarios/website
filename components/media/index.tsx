@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { useTheme } from "../../context/useTheme";
+import React from "react";
 
+import { Container } from "./styles";
 interface IMediaProps extends React.HTMLAttributes<HTMLElement> {
   icon: React.ComponentType<any>,
   href: string,
@@ -9,16 +9,9 @@ interface IMediaProps extends React.HTMLAttributes<HTMLElement> {
 
 export function Media(props: IMediaProps) {
   const { icon: Icon, href, hoverColor } = props;
-  const { theme } = useTheme();
-  const [isHovering, setIsHovering] = useState(false);
-
   return (
-    <a href={href}>
-      <Icon 
-        fill={isHovering ? hoverColor: theme.color}
-        onMouseEnter={() => setIsHovering(true)} 
-        onMouseLeave={() => setIsHovering(false)}
-      />
-    </a>
+    <Container href={href} hoverColor={hoverColor}>
+      <Icon/>
+    </Container>
   );
 }

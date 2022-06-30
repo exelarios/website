@@ -3,27 +3,26 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
 
 import { 
-  lightTheme, 
-  darkTheme, 
-  GlobalStyles 
+  DARK_THEME,
+  GlobalStyles, 
+  LIGHT_THEME
 } from "../config/theme";
 
-import { ThemeContext, IThemeContext } from '../context/useTheme';
+import { ThemeContext, IThemeContext } from "../context/themeContext";
 
 function MyApp({ Component, pageProps }: AppProps) {
 
-  const [currentTheme, setCurrentTheme] = useState("dark");
+  const [currentTheme, setTheme] = useState("dark");
 
   const value: IThemeContext = useMemo(() => {
     return {
-      mode: currentTheme,
-      setTheme: setCurrentTheme,
-      theme: currentTheme == "light" ? lightTheme : darkTheme
+      theme: currentTheme,
+      setTheme
     }
   }, [currentTheme]);
 
   return (
-    <ThemeProvider theme={value.theme}>
+    <ThemeProvider theme={currentTheme === "dark" ? DARK_THEME : LIGHT_THEME}>
       <ThemeContext.Provider value={value}>
         <GlobalStyles/>
         <Component {...pageProps} />

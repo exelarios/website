@@ -12,7 +12,7 @@ import {
 
 import {
   useTheme
-} from "../../context/useTheme";
+} from "../../context/themeContext";
 
 import Moon from "../../assets/tokens/moon.svg";
 import Sun from "../../assets/tokens/sun.svg";
@@ -23,8 +23,8 @@ interface INavbarProps {
 
 export function Navbar(props: INavbarProps) {
   const { location } = props;
-  const { mode, setTheme } = useTheme();
   const [time, setTime] = useState(new Date());
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     setTimeout(() => {
@@ -33,20 +33,16 @@ export function Navbar(props: INavbarProps) {
   }, [time]);
 
   const handleChangeTheme = () => {
-    if (mode == "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
+    setTheme(theme === "light" ? "dark" : "light")
   }
 
   const themeIcon = useMemo(() => {
-    if (mode == "light") {
+    if (theme == "light") {
       return <Moon width="18" height="18" fill="black"/>;
     } else {
       return <Sun width="18" height="18" fill="white"/>;
     }
-  }, [mode]);
+  }, [theme]);
 
   return (
     <Container>
