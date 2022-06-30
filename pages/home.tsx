@@ -1,4 +1,5 @@
-import React, { useMemo } from "react";
+import React from "react";
+import styled from "styled-components";
 import { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -6,28 +7,19 @@ import Image from "next/image";
 import {
   Navbar, 
   Media 
-} from "../../components";
-
-import {
-  Container,
-  ContentContainer,
-  MediaContainer,
-  Content,
-  Section,
-  ArtworkContainer
-} from "./styles";
+} from "../components";
 
 import {
   useTheme
-} from "../../context/themeContext";
+} from "../context/themeContext";
 
-import Twitter from "../../assets/tokens/twitter.svg";
-import Github from "../../assets/tokens/github.svg";
-import Linkedin from "../../assets/tokens/linkedin.svg";
-import Spotify from "../../assets/tokens/spotify.svg";
+import Twitter from "../assets/tokens/twitter.svg";
+import Github from "../assets/tokens/github.svg";
+import Linkedin from "../assets/tokens/linkedin.svg";
+import Spotify from "../assets/tokens/spotify.svg";
 
-import Lights from "../../assets/images/lights.jpg";
-import Skateboarding from "../../assets/images/skateboarding.jpg";
+import Lights from "../assets/images/lights.jpg";
+import Skateboarding from "../assets/images/skateboarding.jpg";
 
 const Home: NextPage = () => {
 
@@ -105,5 +97,55 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  @media (max-width: 1000px) {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+`;
+
+const Section = styled.div`
+  width: 50%;
+  padding: 2rem;
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding: 5%;
+    padding-top: 0;
+  }
+`;
+
+const ContentContainer = styled(Section)`
+  z-index: 1;
+  @media (max-width: 1000px) {
+    transform: translate(0, -192px);
+  }
+`;
+
+const Content = styled.div`
+  margin: auto;
+  min-height: 300px;
+  mix-blend-mode: difference;
+  color: ${p => p.theme.color};
+  transition: all 1s;
+  width: 100%;
+`;
+
+const ArtworkContainer = styled.div`
+  background-color: black;
+  margin: auto;
+  width: 450px;
+  height: 600px;
+`;
+
+const MediaContainer = styled.div`
+  display: flex;
+  & > a {
+    margin-right: 30px;
+  }
+`;
 
 export default Home;
