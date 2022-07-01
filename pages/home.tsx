@@ -86,9 +86,8 @@ const Home: NextPage = () => {
               <Image
                 src={theme === "dark" ? Skateboarding : Lights}
                 alt={theme === "dark" ? "Deric skateboarding in the dark" : "beam of lights"}
-                width="450px"
-                height="600px"
-                objectFit="cover" 
+                layout="fill"
+                objectFit="cover"
               />
             </ArtworkContainer>
           </Section>
@@ -137,7 +136,8 @@ const Content = styled.div`
 const ArtworkContainer = styled.div`
   background-color: black;
   margin: auto;
-  width: 450px;
+  position: relative;
+  width: min(100%, 450px);
   height: 600px;
 `;
 
