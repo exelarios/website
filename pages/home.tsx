@@ -7,7 +7,7 @@ import Image from "next/image";
 import {
   Navbar, 
   Media 
-} from "../components";
+} from "@components";
 
 import {
   useTheme

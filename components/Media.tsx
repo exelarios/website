@@ -1,9 +1,13 @@
 import React from "react";
+import styled from "styled-components";
 
-import { Container } from "./styles";
 interface IMediaProps extends React.HTMLAttributes<HTMLElement> {
   icon: React.ComponentType<any>,
   href: string,
+  hoverColor?: string
+}
+
+interface IContainerProps {
   hoverColor?: string
 }
 
@@ -19,3 +23,12 @@ export function Media(props: IMediaProps) {
     </Container>
   );
 }
+
+const Container = styled.a<IContainerProps>`
+  & > svg {
+    fill: ${p => p.theme.color};
+    &:hover {
+      fill: ${p => p.hoverColor};
+    }
+  }
+`;

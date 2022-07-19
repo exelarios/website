@@ -1,21 +1,10 @@
-import { 
-  useEffect, 
-  useMemo, 
-  useState 
-} from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import styled from "styled-components";
 
-import {
-  Container,
-  Section,
-  StyledButton
-} from "./styles";
+import { useTheme } from "../context/themeContext";
 
-import {
-  useTheme
-} from "../../context/themeContext";
-
-import Moon from "../../assets/tokens/moon.svg";
-import Sun from "../../assets/tokens/sun.svg";
+import Moon from "../assets/tokens/moon.svg";
+import Sun from "../assets/tokens/sun.svg";
 
 interface INavbarProps {
   location: string
@@ -32,9 +21,9 @@ export function Navbar(props: INavbarProps) {
     }, 1000);
   }, [time]);
 
-  const handleChangeTheme = () => {
+  const handleChangeTheme = useCallback(() => {
     setTheme(theme === "light" ? "dark" : "light")
-  }
+  }, [theme, setTheme]);
 
   const themeIcon = useMemo(() => {
     if (theme == "light") {
@@ -58,3 +47,22 @@ export function Navbar(props: INavbarProps) {
     </Container>
   );
 }
+
+const Container = styled.div`
+  padding: 2rem;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding: 5%;
+  }
+`;
+
+const Section = styled.div``;
+
+const StyledButton = styled.button`
+  outline: none;
+  border: 0;
+  background: none;
+`;

@@ -4,8 +4,8 @@ import { ThemeProvider } from "styled-components";
 
 import { 
   DARK_THEME,
-  GlobalStyles, 
-  LIGHT_THEME
+  LIGHT_THEME,
+  GlobalStyles
 } from "../config/theme";
 
 import { ThemeContext, IThemeContext } from "../context/themeContext";

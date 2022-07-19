@@ -1,2 +1,2 @@
-export * from "./media";
-export * from "./navbar";
+export * from "./Media";
+export * from "./Navbar";
