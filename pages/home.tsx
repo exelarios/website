@@ -42,12 +42,12 @@ const Home: NextPage = () => {
             <Content>
               <h1>deric</h1>
               <p>
-                a student at <a href="https://www.cpp.edu/">Cal Poly Pomona</a> studying Computer Science with
-                interest in front-end engineering.
+                a student at Cal Poly Pomona studying Computer Science with
+                interest in front-end software engineering.
               </p>
               <p>
-                currently a software engineer intern at <a href="https://coinbase.com">Coinbase</a> working on client performance and latency.
-                previously a intern at Zendesk worked on <a href="https://garden.zendesk.com/">design system</a>.
+                currently a software engineer intern at <Anchor href="https://coinbase.com">Coinbase</Anchor> working on client performance and latency.
+                previously a intern at Zendesk worked on <Anchor href="https://garden.zendesk.com/">design system</Anchor>.
               </p>
               <p>
                 also a tech enthusiast, esk8er, graphic design hobbyist, amateur
@@ -55,7 +55,7 @@ const Home: NextPage = () => {
                 challenges to learn more about my field of study.
               </p>
               <p>
-                feel free to reach me if you just wanna chat or grab boba.
+                feel free to reach out if you just wanna chat or grab boba.
               </p>
             </Content>
             <MediaContainer>
@@ -132,6 +132,11 @@ const Content = styled.div`
   transition: all 1s;
   width: 100%;
 `;
+
+const Anchor = styled.a.attrs(props => ({
+  target: "_blank",
+  rel: "noopener noreferrer"
+}))``;
 
 const ArtworkContainer = styled.div`
   background-color: black;

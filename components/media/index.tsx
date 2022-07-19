@@ -10,7 +10,11 @@ interface IMediaProps extends React.HTMLAttributes<HTMLElement> {
 export function Media(props: IMediaProps) {
   const { icon: Icon, href, hoverColor } = props;
   return (
-    <Container href={href} hoverColor={hoverColor}>
+    <Container 
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      hoverColor={hoverColor}>
       <Icon/>
     </Container>
   );
