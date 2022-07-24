@@ -40,7 +40,7 @@ const Home: NextPage = () => {
         <Container>
           <ContentContainer>
             <Content>
-              <h1>deric</h1>
+              <Heading>deric</Heading>
               <p>
                 a student at Cal Poly Pomona studying Computer Science with
                 interest in front-end software engineering.
@@ -107,6 +107,10 @@ const Container = styled.div`
   }
 `;
 
+const Heading = styled.h1`
+  font-family: "led";
+`
+
 const Section = styled.div`
   width: 50%;
   padding: 2rem;
@@ -129,14 +133,19 @@ const Content = styled.div`
   min-height: 300px;
   mix-blend-mode: difference;
   color: ${p => p.theme.color};
-  transition: all 1s;
   width: 100%;
 `;
 
 const Anchor = styled.a.attrs(props => ({
   target: "_blank",
   rel: "noopener noreferrer"
-}))``;
+}))`
+  font-family: "led";
+  &:hover {
+    color: ${p => p.theme.anchor.color};
+    background-color: ${p => p.theme.anchor.background};
+  }
+`;
 
 const ArtworkContainer = styled.div`
   background-color: black;

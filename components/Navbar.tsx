@@ -59,7 +59,9 @@ const Container = styled.div`
   }
 `;
 
-const Section = styled.div``;
+const Section = styled.div`
+  font-family: "led";
+`;
 
 const StyledButton = styled.button`
   outline: none;

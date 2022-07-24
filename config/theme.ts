@@ -4,33 +4,39 @@ declare module "styled-components" {
   export interface DefaultTheme {
     background: string,
     color: string,
-    hue: any
+    anchor: any
   } 
 }
 
 export const LIGHT_THEME: DefaultTheme = {
   background: "white",
   color: "black",
-  hue: {
-    link: "black",
-    visited: "#727272"
+  anchor: {
+    color: "white",
+    background: "black"
   }
 }
 
 export const DARK_THEME: DefaultTheme = {
   background: "black",
   color: "white",
-  hue: {
-    link: "white",
-    visited: "#d5d5d5"
+  anchor: {
+    color: "black",
+    background: "white"
   }
 }
 
 export const GlobalStyles = createGlobalStyle`
+  @font-face {
+    font-family: "Led";
+    src: url('/fonts/led.ttf') format("truetype");
+  }
+
   body {
     background: ${props => props.theme.background};
     color: ${props => props.theme.color};
     font-family: "Source Code Pro", "Courier New", monospace;
+    transition: all 3s;
     max-width: 1920px;
     margin: auto;
     padding: 0;
@@ -40,11 +46,10 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     a:link {
-      color: ${p => p.theme.hue.link}
+      color: ${p => p.theme.color}
     }
-
     a:visited {
-      color: ${p => p.theme.hue.visited}
+      color: ${p => p.theme.color}
     }
   }
 `
