@@ -47,7 +47,7 @@ const Home: NextPage = () => {
               </p>
               <p>
                 currently a software engineer intern at <Anchor href="https://coinbase.com">Coinbase</Anchor> working on client performance and latency.
-                previously a intern at Zendesk worked on <Anchor href="https://garden.zendesk.com/">design system</Anchor>.
+                previously a intern at <Anchor href="https://zendesk.com">Zendesk</Anchor> worked on <Anchor href="https://garden.zendesk.com/">design system</Anchor>.
               </p>
               <p>
                 also a tech enthusiast, esk8er, graphic design hobbyist, amateur

@@ -36,7 +36,6 @@ export const GlobalStyles = createGlobalStyle`
     background: ${props => props.theme.background};
     color: ${props => props.theme.color};
     font-family: "Source Code Pro", "Courier New", monospace;
-    transition: all 3s;
     max-width: 1920px;
     margin: auto;
     padding: 0;
