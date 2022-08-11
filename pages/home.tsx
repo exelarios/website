@@ -19,7 +19,7 @@ import Linkedin from "../assets/tokens/linkedin.svg";
 import Spotify from "../assets/tokens/spotify.svg";
 
 import Lights from "../assets/images/lights.jpg";
-import Skateboarding from "../assets/images/skateboarding.jpg";
+import DericStanding from "../assets/images/deric_standing.jpg";
 
 const Home: NextPage = () => {
 
@@ -41,22 +41,22 @@ const Home: NextPage = () => {
           <ContentContainer>
             <Content>
               <Heading>deric</Heading>
-              <p>
+              <Paragraph>
                 a student at Cal Poly Pomona studying Computer Science with
                 interest in front-end software engineering.
-              </p>
-              <p>
+              </Paragraph>
+              <Paragraph>
                 currently a software engineer intern at <Anchor href="https://coinbase.com">Coinbase</Anchor> working on client performance and latency.
                 previously a intern at <Anchor href="https://zendesk.com">Zendesk</Anchor> worked on <Anchor href="https://garden.zendesk.com/">design system</Anchor>.
-              </p>
-              <p>
+              </Paragraph>
+              <Paragraph>
                 also a tech enthusiast, esk8er, graphic design hobbyist, amateur
                 photographer, and a walking meme. always looking for new
                 challenges to learn more about my field of study.
-              </p>
-              <p>
+              </Paragraph>
+              <Paragraph>
                 feel free to reach out if you just wanna chat or grab boba.
-              </p>
+              </Paragraph>
             </Content>
             <MediaContainer>
               <Media 
@@ -84,8 +84,8 @@ const Home: NextPage = () => {
           <Section>
             <ArtworkContainer>
               <Image
-                src={theme === "dark" ? Skateboarding : Lights}
-                alt={theme === "dark" ? "Deric skateboarding in the dark" : "beam of lights"}
+                src={theme === "dark" ? DericStanding : Lights}
+                alt={theme === "dark" ? "Deric standing in the dark" : "beam of lights"}
                 layout="fill"
                 objectFit="cover"
               />
@@ -108,8 +108,13 @@ const Container = styled.div`
 `;
 
 const Heading = styled.h1`
+  mix-blend-mode: difference;
   font-family: "led";
 `
+
+const Paragraph = styled.p`
+  mix-blend-mode: difference;
+`;
 
 const Section = styled.div`
   width: 50%;
@@ -118,7 +123,7 @@ const Section = styled.div`
     width: 100%;
     padding: 5%;
     padding-top: 0;
-  }
+  };
 `;
 
 const ContentContainer = styled(Section)`
@@ -136,19 +141,9 @@ const Content = styled.div`
   width: 100%;
 `;
 
-const Anchor = styled.a.attrs(props => ({
-  target: "_blank",
-  rel: "noopener noreferrer"
-}))`
-  font-family: "led";
-  &:hover {
-    color: ${p => p.theme.anchor.color};
-    background-color: ${p => p.theme.anchor.background};
-  }
-`;
-
 const ArtworkContainer = styled.div`
   background-color: black;
+  filter: opacity(${p => p.theme.color == "white" ? 0.8 : 1});
   margin: auto;
   position: relative;
   width: min(100%, 450px);
@@ -159,6 +154,17 @@ const MediaContainer = styled.div`
   display: flex;
   & > a {
     margin-right: 30px;
+  }
+`;
+
+const Anchor = styled.a.attrs(props => ({
+  target: "_blank",
+  rel: "noopener noreferrer"
+}))`
+  font-family: "led";
+  &:hover {
+    color: ${p => p.theme.anchor.color};
+    background-color: ${p => p.theme.anchor.background};
   }
 `;
 
