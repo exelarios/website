@@ -46,8 +46,8 @@ const Home: NextPage = () => {
                 interest in front-end software engineering.
               </Paragraph>
               <Paragraph>
-                currently a software engineer intern at <Anchor href="https://coinbase.com">Coinbase</Anchor> working on client performance and latency.
-                previously a intern at <Anchor href="https://zendesk.com">Zendesk</Anchor> worked on <Anchor href="https://garden.zendesk.com/">design system</Anchor>.
+                previously a software engineer intern at <Anchor href="https://coinbase.com">Coinbase</Anchor> worked on client performance & latency 
+                and  <Anchor href="https://zendesk.com">Zendesk</Anchor> for <Anchor href="https://garden.zendesk.com/">design system</Anchor>.
               </Paragraph>
               <Paragraph>
                 also a tech enthusiast, esk8er, graphic design hobbyist, amateur
