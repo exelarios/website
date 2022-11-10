@@ -21,6 +21,26 @@ import Spotify from "../assets/tokens/spotify.svg";
 import Lights from "../assets/images/lights.jpg";
 import DericStanding from "../assets/images/deric_standing.jpg";
 
+type Portrait = {
+  src: StaticImageData,
+  alt: string
+}
+
+function getPortrait(theme: string) {
+  const images: Record<string, Portrait> = {
+    light: {
+      src: Lights,
+      alt: "beams of lights of MOCA"   
+    },
+    dark: {
+      src: DericStanding,
+      alt: "deric standing in the darking trying to look cool."
+    }
+  }
+
+  return images[theme];
+}
+
 const Home: NextPage = () => {
 
   const { theme } = useTheme();
@@ -83,11 +103,12 @@ const Home: NextPage = () => {
           </ContentContainer>
           <Section>
             <ArtworkContainer>
+              {/* eslint-disable-next-line jsx-a11y/alt-text */}
               <Image
-                src={theme === "dark" ? DericStanding : Lights}
-                alt={theme === "dark" ? "Deric standing in the dark" : "beam of lights"}
+                {...getPortrait(theme)}
                 layout="fill"
                 objectFit="cover"
+                priority
               />
             </ArtworkContainer>
           </Section>
@@ -142,7 +163,6 @@ const Content = styled.div`
 `;
 
 const ArtworkContainer = styled.div`
-  background-color: black;
   filter: opacity(${p => p.theme.color == "white" ? 0.8 : 1});
   margin: auto;
   position: relative;

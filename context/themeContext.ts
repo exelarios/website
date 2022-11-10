@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 
 export interface IThemeContext {
-  theme?: string;
+  theme: string;
   setTheme(mode: string): void;
 }
 
