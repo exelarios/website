@@ -23,8 +23,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider theme={currentTheme === "dark" ? DARK_THEME : LIGHT_THEME}>
+      <GlobalStyles/>
       <ThemeContext.Provider value={value}>
-        <GlobalStyles/>
         <Component {...pageProps} />
       </ThemeContext.Provider>
     </ThemeProvider>

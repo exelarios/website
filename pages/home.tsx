@@ -21,26 +21,6 @@ import Spotify from "../assets/tokens/spotify.svg";
 import Lights from "../assets/images/lights.jpg";
 import DericStanding from "../assets/images/deric_standing.jpg";
 
-type Portrait = {
-  src: StaticImageData,
-  alt: string
-}
-
-function getPortrait(theme: string) {
-  const images: Record<string, Portrait> = {
-    light: {
-      src: Lights,
-      alt: "beams of lights of MOCA"   
-    },
-    dark: {
-      src: DericStanding,
-      alt: "deric standing in the dark trying to look cool."
-    }
-  }
-
-  return images[theme];
-}
-
 const Home: NextPage = () => {
 
   const { theme } = useTheme();
@@ -103,9 +83,18 @@ const Home: NextPage = () => {
           </ContentContainer>
           <Section>
             <ArtworkContainer>
-              {/* eslint-disable-next-line jsx-a11y/alt-text */}
-              <Image
-                {...getPortrait(theme)}
+              <Portrait
+                src={DericStanding}
+                opacity={theme === "dark" ? 1 : 0}
+                alt="deric standing in the dark trying to look cool"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+              <Portrait
+                src={Lights}
+                opacity={theme === "dark" ? 0 : 1}
+                alt="beams of lights from MOCA"
                 layout="fill"
                 objectFit="cover"
                 priority
@@ -177,6 +166,11 @@ const MediaContainer = styled.div`
   }
 `;
 
+const Portrait = styled(Image)<{ opacity: number }>`
+  opacity: ${p => p.opacity};
+  transition: all 1s;
+`;
+
 const Anchor = styled.a.attrs(props => ({
   target: "_blank",
   rel: "noopener noreferrer"
@@ -187,5 +181,6 @@ const Anchor = styled.a.attrs(props => ({
     background-color: ${p => p.theme.anchor.background};
   }
 `;
+
 
 export default Home;
