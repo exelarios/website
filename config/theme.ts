@@ -1,5 +1,7 @@
 import { createGlobalStyle, DefaultTheme } from "styled-components";
 
+import LEDFont from "../assets/styles/font.module.css";
+
 declare module "styled-components" {
   export interface DefaultTheme {
     background: string,
@@ -27,10 +29,8 @@ export const DARK_THEME: DefaultTheme = {
 }
 
 export const GlobalStyles = createGlobalStyle`
-  @font-face {
-    font-family: "Led";
-    src: url('/fonts/led.ttf') format("truetype");
-  }
+
+  ${LEDFont}
 
   body {
     background: ${props => props.theme.background};
