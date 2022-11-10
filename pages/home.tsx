@@ -34,7 +34,7 @@ function getPortrait(theme: string) {
     },
     dark: {
       src: DericStanding,
-      alt: "deric standing in the darking trying to look cool."
+      alt: "deric standing in the dark trying to look cool."
     }
   }
 
