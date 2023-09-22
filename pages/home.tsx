@@ -42,7 +42,7 @@ const Home: NextPage = () => {
             <Content>
               <Heading>deric</Heading>
               <Paragraph>
-                a student at Cal Poly Pomona studying Computer Science with
+                a new grad at Cal Poly Pomona studying Computer Science with
                 interest in front-end software engineering.
               </Paragraph>
               <Paragraph>
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
               </Paragraph>
               <Paragraph>
                 also a tech enthusiast, esk8er, graphic design hobbyist, amateur
-                photographer, and a walking meme. always looking for new
+                photographer, keyboard enthusiast and a walking meme. always looking for new
                 challenges to learn more about my field of study.
               </Paragraph>
               <Paragraph>
