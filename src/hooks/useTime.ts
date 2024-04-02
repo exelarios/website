@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
-function useTime(refreshRate) {
+function useTime(refreshRate: number) {
   const [value, setValue] = useState(Date.now());
   
   useEffect(() => {
