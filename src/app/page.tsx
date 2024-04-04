@@ -12,7 +12,7 @@ export default function Home() {
           <li className="ml-6">game dev</li>
           <li className="ml-6">noodles, soup dumplings <br/> sushi, hotpot & pancakes</li>
           <li className="ml-6">mechanical keyboards</li>
-          <li className="ml-6">falling of my skateboard</li>
+          <li className="ml-6">falling off my skateboard</li>
           <li className="ml-6">boba drinks, without the boba</li>
         </ul>
       </details>
