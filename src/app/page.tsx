@@ -1,10 +1,10 @@
 export default function Home() {
   return (
-    <main className="px-5 grow">
+    <main className="px-5">
       <h1 className="font-semibold text-2xl">Deric Kwok</h1>
       <p className="my-2">I like to build things -- mostly software.</p>
       <details className="my-5">
-        <summary className="list-none">Things im into</summary>
+        <summary>Things im into</summary>
         <ul>
           <li className="ml-6">tech</li>
           <li className="ml-6">ui/ux</li>
