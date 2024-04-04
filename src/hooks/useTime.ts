@@ -15,7 +15,7 @@ function useTime(refreshRate: number) {
     return () => {
       clearInterval(interval);
     }
-  }, []);
+  }, [refreshRate]);
 
   const currentTime = useMemo(() => {
     return new Intl.DateTimeFormat("en-US", {

@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
+  --foreground-rgb: 69, 69, 69;
+  --background-rgb: 245, 245, 245;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 0, 0, 0;
+    --foreground-rgb: 200, 200, 200;
+    --background-rgb: 10, 10, 10;
   }
 }
 
@@ -18,6 +18,15 @@ body {
   color: rgb(var(--foreground-rgb));
   background-color: rgb(var(--background-rgb));
   font-family: monospace;
+}
+
+summary::before {
+  content: "+";
+  margin-right: 10px;
+}
+
+details[open] > summary::before {
+  content: "-";
 }
 
 @layer utilities {
