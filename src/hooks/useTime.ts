@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 
 function useTime(refreshRate: number) {
-  const [value, setValue] = useState(Date.now());
+  // Set the default value as `Date.now()`
+  // causes hydration issues of mismatch text.
+  const [value, setValue] = useState<number>(0);
   
   useEffect(() => {
     if (typeof window == undefined) {
@@ -25,7 +27,7 @@ function useTime(refreshRate: number) {
     }).format(value);
   }, [value]);
 
-  return currentTime;
+  return value ? currentTime : "00:00";
 }
 
 export default useTime;
