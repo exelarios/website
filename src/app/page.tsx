@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <main className="px-5">
+      <main className="px-5 md:mt-[10%]">
         <h1 className="md:text-right font-semibold text-2xl text-white">Deric Kwok</h1>
         <p className="md:text-right mt-2 text-white">I like to build things -- mostly software.</p>
         <p className="md:text-right text-white">
