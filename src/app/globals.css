@@ -1,22 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
-  --foreground-rgb: 69, 69, 69;
-  --background-rgb: 245, 245, 245;
+  --foreground-rgb: rgb(69, 69, 69);
+  --background-rgb: rgb(245, 245, 245);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 200, 200, 200;
-    --background-rgb: 10, 10, 10;
+    --foreground-rgb: white;
+    --background-rgb: rgb(10, 10, 10);
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background-color: rgb(var(--background-rgb));
+  color: var(--foreground-rgb);
+  background-color: var(--background-rgb);
   height: 100%;
   font-family: monospace;
 }
@@ -36,14 +34,6 @@ summary::before {
 
 details[open] > summary::before {
   content: "-";
-}
-
-a {
-  color: #6366f1 /* indigo 500 */
-}
-
-a:visited {
-  color: #3730a3 /* indigo 800 */
 }
 
 @layer utilities {
